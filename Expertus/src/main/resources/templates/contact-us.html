@@ -61,14 +61,14 @@
                         <div class="navigation">
                             <div id="navigation">
                                 <ul>
-                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="#" th:href="@{/}">Home</a></li>
                                     <li class="has-sub"><a href="#">Hosting</a>
                                         <ul>
                                             <li><a href="service-list.html">Hosting List</a></li>
-                                            <li><a href="service-single.html">Wordpress Hosting</a></li>
+                                            <li><a href="#" th:href="@{/service}">Wordpress Hosting</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="about.html">About us</a></li>
+                                    <li><a href="#" th:href="@{/about}">About us</a></li>
                                     <li class="has-sub"><a href="#">Blog</a>
                                         <ul>
                                             <li><a href="blog-default.html">Blog Default</a></li>
@@ -77,9 +77,9 @@
                                     </li>
                                     <li class="has-sub"><a href="#">Pages</a>
                                         <ul>
-                                            <li><a href="testimonials.html">Clients Reviews</a> </li>
-                                            <li><a href="faq.html">FAQ</a> </li>
-                                            <li><a href="checkout.html">Checkout</a> </li>
+                                            <li><a href="#" th:href="@{/test}">Clients Reviews</a> </li>
+                                            <li><a href="#" th:href="@{/faq}">FAQ</a> </li>
+                                            <li><a href="#" th:href="@{/checkout}">Checkout</a> </li>
                                             <li><a href="tab.html">Tabs</a> </li>
                                             <li><a href="alerts.html">Alerts</a> </li>
                                             <li><a href="accordions.html">Accordions</a> </li>
@@ -88,8 +88,8 @@
                                             <li><a href="styleguide.html">styleguide</a> </li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact-us.html">Contact</a></li>
-                                    <li><a href="template-feature.html">Template Feature</a></li>
+                                    <li><a href="#" th:href="@{/contact}">Contact</a></li>
+                                    <li><a href="#" th:href="@{/feature}">Template Feature</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                         <h1 class="page-title">Contact Us</h1>
                         <div class="page-breadcrumb">
                             <ol class="breadcrumb">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#"th:href="@{/}">Home</a></li>
                                 <li>Contact Us</li>
                             </ol>
                         </div>
@@ -285,10 +285,10 @@
                     <div class="footer-widget">
                         <h3 class="footer-title">Quick Links</h3>
                         <ul>
-                            <li><a href="# ">HomePage</a>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
+                            <li><a href="# " th:href="@{/}">HomePage</a>
+                                <li><a href="#" th:href="@{/service}">Services</a></li>
+                                <li><a href="#" th:href="@{/about}">About us</a></li>
+                                <li><a href="#" th:href="@{/contact}">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
