@@ -41,7 +41,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12">
                         <nav>
                             <ul>
-                                <li>Contact Us 24/7 : 180-123-4567 </li>
+                                <li>Contact Us 24/7 : 111-111-1111 </li>
                                 <li class="hidden-xs">|</li>
                                 <li class="hidden-xs"><a href="#">Help</a></li>
                                 <li class="hidden-xs">|</li>
@@ -94,10 +94,10 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider-captions">
-                                <h1 class="slider-title">La meilleur solution Cloud CRM pour votre centre d'appel</h1>
-                                <p class="mb30 hidden-sm hidden-xs">Nous désirons garantir à nos clients la stabilité et la qualité de nos services combinés à bon rapport prix-qualité.</p>
-                                <a href="#" class="btn btn-primary btn-lg hidden-xs">Commener</a> &nbsp;&nbsp;
-                                <a href="#" class="btn btn-primary btn-lg hidden-xs">Contactez-nous</a>
+                                <h1 class="slider-title">The best solution for your future  payment</h1>
+                                <p class="mb30 hidden-sm hidden-xs">We ensure our clients the stability and quality of our combined services at a good price-quality ratio.</p>
+                                <a href="#" th:href="@{/checkout}" class="btn btn-primary btn-lg hidden-xs">Start</a> &nbsp;&nbsp;
+                                <a href="#" th:href="@{/contact}"class="btn btn-primary btn-lg hidden-xs">Contact-Us</a>
                             </div>
                         </div>
                     </div>
@@ -109,10 +109,10 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider-captions">
-                                <h1 class="slider-title">La meilleur solution Cloud CRM pour votre centre d'appel</h1>
-                                <p class="mb30 hidden-sm hidden-xs"> Notre but est que chaque entreprise et chaque client puissent gérer et téléphoner  depuis partout, en tout temps, de manière simple et flexible.</p>
-                                <a href="#" class="btn btn-primary btn-lg hidden-xs">Commencer</a>&nbsp;&nbsp;
-                                <a href="#" class="btn btn-primary btn-lg hidden-xs hidden-sm">Contactez-nous</a>
+                                <h1 class="slider-title">The best solution for your future  payment</h1>
+                                <p class="mb30 hidden-sm hidden-xs"> Our goal is that every business and every customer can manage and pay anywhere, anytime, easily and flexibly.</p>
+                                <a href="#" th:href="@{/checkout}" class="btn btn-primary btn-lg hidden-xs">Start</a>&nbsp;&nbsp;
+                                <a href="#" th:href="@{/contact}" class="btn btn-primary btn-lg hidden-xs hidden-sm">Contact-US</a>
                             </div>
                         </div>
                     </div>
@@ -124,10 +124,10 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
                             <div class="slider-captions">
-                                <h1 class="slider-title">La meilleur solution Cloud CRM pour votre centre d'appel</h1>
-                                <p class="mb30 hidden-sm hidden-xs">Notre but est que chaque entreprise et chaque client puissent gérer et téléphoner  depuis partout, en tout temps, de manière simple et flexible.</p>
-                                <a href="#" class="btn btn-primary btn-lg hidden-xs">Qui somme nous </a>&nbsp;&nbsp;
-                                <a href="#" class="btn btn-primary btn-lg hidden-xs">Contatctez-nous</a>
+                                <h1 class="slider-title">The best solution for your future  payment</h1>
+                                <p class="mb30 hidden-sm hidden-xs">Our goal is that every business and every customer can manage and pay anywhere, anytime, easily and flexibly.</p>
+                                <a href="#" th:href="@{/about}"class="btn btn-primary btn-lg hidden-xs">Who are we </a>&nbsp;&nbsp;
+                                <a href="#" th:href="@{/contact}"class="btn btn-primary btn-lg hidden-xs">Contatct-US</a>
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,7 @@
     <!-- testimonial-section -->
     
     <!-- footer -->
-    <div class="footer ">
+     <div class="footer ">
         <div class="container ">
             <div class="row ">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
@@ -389,7 +389,7 @@
                     <div class="footer-widget ">
                         <form>
                             <div class="input-group add-on">
-                                <input class="form-control" placeholder="email address here" type="text">
+                                <input class="form-control" placeholder="email address here" type="email" name="subcribe" >
                                 <div class="input-group-btn">
                                     <button class="btn btn-primary ft-btn" type="submit">subscribe</button>
                                 </div>
@@ -398,22 +398,12 @@
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                    <div class="ft-top-line"></div>
+                    <div class="ft-top-line "></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row ">
                 <!-- footer-services -->
-                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
-                    <div class="footer-widget ">
-                        <h3 class="footer-title ">Services</h3>
-                        <ul>
-                            <li><a href="# ">Web Hosting</a>
-                                <li><a href="# ">Cloud Hosting</a></li>
-                                <li><a href="# ">Shared Hosting</a></li>
-                                <li><a href="# ">Wordpress Hosting</a></li>
-                        </ul>
-                    </div>
-                </div>
+                
                 <!-- /.footer-services -->
                 <!-- footer-links -->
                 <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
@@ -422,9 +412,8 @@
                         <ul>
                             <li><a href="# " th:href="@{/}">HomePage</a>
                                 <li><a href="# " th:href="@{/service}">Services</a></li>
-                                <li><a href="#" th:href="@{/about}">About us</a></li>
-                                <li><a href="# " th:href="@{/contact}">Contact us</a></li>
-                        </ul>
+                                <li><a href="# " th:href="@{/about}">About us</a></li>
+                                <li><a href="# " th:href="@{/contact}">Contact us</a></li></ul>
                     </div>
                 </div>
                 <!-- /.footer-links -->
@@ -433,11 +422,11 @@
                     <div class="footer-widget ">
                         <h3 class="footer-title ">Recent Post</h3>
                         <div class="ft-post ">
-                            <h5 class="mb10 "><a href="# " class="ft-post-title ">Web Hosting Website Template</a></h5>
+                            <h5 class="mb10 "><a href="# " class="ft-post-title "> Hosting Website Template</a></h5>
                             <div class="meta "><span>20 February,2020 </span> <span>/</span> <span>By <a href="# " class="meta-link ">Admin</a></span></div>
                         </div>
                         <div class="ft-post ">
-                            <h5 class="mb10 "><a href="# " class="ft-post-title ">Wordpress Hosting Website</a></h5>
+                            <h5 class="mb10 "><a href="# " class="ft-post-title "> Hosting Website</a></h5>
                             <div class="meta "><span>19 February,2020 </span> <span>/</span> <span>By <a href="# " class="meta-link ">Admin</a></span></div>
                         </div>
                     </div>
@@ -447,7 +436,7 @@
                 <div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                     <div class="footer-widget ">
                         <h3 class="footer-title ">About us</h3>
-                        <p>Nullam ante ligula commd is dvelit velcursus rutum miesue habitantes morbi tristique one senectus enetusetada.</p>
+                        <p>Our vision is to be a world leader in payments by offering new state-of-the-art solutions.</p>
                     </div>
                 </div>
                 <!-- /.footer-post -->
@@ -460,14 +449,13 @@
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 ">
                         <div class="social-icon "> <a href="# " class="btn-social-icon "><i class="fa fa-facebook "></i></a> <a href="# " class="btn-social-icon "><i class="fa fa-twitter "></i></a> <a href="# " class="btn-social-icon "><i class="fa fa-linkedin "></i></a> <a href="# " class="btn-social-icon "><i class="fa fa-google-plus "></i></a> </div>
                     </div>
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 ">
-                        <p>Copyright © All Rights Reserved 2020 Template Design by <a href="https://easetemplate.com/" target="_blank" class="copyrightlink">EaseTemplate</a></p>
-                    </div>
+                    
                 </div>
                 <!-- /. tiny-footer -->
             </div>
         </div>
     </div>
+   
     <!-- /.footer -->
     <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
