@@ -11,6 +11,10 @@ public class MainController {
 	public String Home() {
 		return"index";
 	}
+	@RequestMapping(value="/chat")
+	public String chat() {
+		return"chat";
+	}
 	@RequestMapping(value="/about")
 	public String about() {
 		return"about";
@@ -34,10 +38,6 @@ public class MainController {
 	@RequestMapping(value="/service")
 	public String service() {
 		return"service-single";
-	}
-	@RequestMapping(value="/feature")
-	public String feature() {
-		return"template-feature";
 	}
 	@RequestMapping(value="/test")
 	public String test() {
