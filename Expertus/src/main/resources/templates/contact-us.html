@@ -104,8 +104,9 @@
                     <div class="contact-form">
                         <h3>Reach out to us by fill the below form :</h3>
                         <div class="row">
+                        <form>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <form>
+                                
                                 <div class="form-group">
                                     <label class="control-label sr-only"></label>
  									<input type="text" placeholder="First Name" class="form-control" required >
@@ -129,9 +130,9 @@
                                         <textarea class="form-control" name="textarea" rows="4" placeholder="Messages"></textarea>
                                 </div>
                                 <button type="submit" name="singlebutton" class="btn btn-primary">submit</button>
-                         </form>
+                         
                             </div>
-                           
+                           </form>
                         </div>
                     </div>
                 </div>
@@ -218,7 +219,7 @@
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
                     <div class="footer-widget ">
-                        <form>
+                        <form th:action="@{/newsletter}" method="POST">
                             <div class="input-group add-on">
                                 <input class="form-control" placeholder="email address here" type="email" name="subcribe" >
                                 <div class="input-group-btn">
@@ -253,7 +254,7 @@
                     <div class="footer-widget ">
                         <h3 class="footer-title ">Recent Post</h3>
                         <div class="ft-post ">
-                            <h5 class="mb10 "><a href="# " class="ft-post-title "> Hosting Website Template</a></h5>
+                            <h5 class="mb10 "><a href="# " class="ft-post-title "> Hosting Template</a></h5>
                             <div class="meta "><span>20 February,2020 </span> <span>/</span> <span>By <a href="# " class="meta-link ">Admin</a></span></div>
                         </div>
                         <div class="ft-post ">
