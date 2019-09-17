@@ -42,7 +42,7 @@
                                 <li class="hidden-xs">|</li>
                                 <li class="hidden-xs"><a href="#" th:href="@{/contact}">Help</a></li>
                                 <li class="hidden-xs">|</li>
-                                <li class="hidden-xs"><i class="fa fa-user-circle"></i>&nbsp;&nbsp;<a href="#">Sign In</a></li>
+                                <li class="hidden-xs"><i class="fa fa-user-circle"></i>&nbsp;&nbsp;<a href="#" th:href="@{/login}">Sign In</a></li>
                                 <li class="hidden-xs">|</li>
                             </ul>
                             <input class="toggle" type="search" />
@@ -101,115 +101,79 @@
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-                    <div class="box">
-                        <h3 class="box-title">Select Your Hosting Plan</h3>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="question1" name="question" type="radio" class="with-font" value="sel" />
-                                <label for="question1">Personal</label>
-                                <p class="plan-text">
-                                    1 install | 25K visits/month | 10 GB local storage</p>
-                                <span class="plan-price">$29 / mo</span>
-                            </div>
-                        </div>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="question2" name="question" type="radio" class="with-font" value="sel" />
-                                <label for="question2">Profesional</label>
-                                <p class="plan-text">
-                                    Up to 10 installs | 100K visits/month | 20 GB local storage</p>
-                                <span class="plan-price">$99 / mo</span>
-                            </div>
-                        </div>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="question3" name="question" type="radio" class="with-font" value="sel" />
-                                <label for="question3">Business</label>
-                                <p class="plan-text">Up to 25 installs | 400K visits/month | 30 GB local storage</p>
-                                <span class="plan-price">$249 / mo</span>
-                            </div>
-                        </div>
+                
+            <div class="col-lg-6 col-md-8 col-12 my-auto mx-auto">
+                <h1>
+                    Payment with Stripe 
+                </h1>
+                <p class="lead mb-4">
+                    Please fill the form below to complete the payment
+                </p>
+                <h5 class="mb-2">Choose your payment plan</h5>
+                <p class="text-muted">
+                    60% OFF when you upgrade to annual plan.
+                </p>
+                <div class="py-2">
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="monthly-plan" name="premium-plan" type="radio"
+                               value="monthly-subscription"/>
+                        <label class="custom-control-label" for="monthly-plan">
+                            <strong>Monthly $9.99</strong><br/>
+                            <small class="text-muted">
+                                Pay $9.99 every month and get access to all premium features.
+                            </small>
+                        </label>
                     </div>
-                    <div class="box">
-                        <h3 class="box-title">Select term length</h3>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="question4" name="question" type="radio" class="with-font" value="sel" />
-                                <label for="question4">1 Month</label>
-                                <span class="plan-price term-price">$29 / mo</span>
-                            </div>
-                        </div>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="question5" name="question" type="radio" class="with-font" value="sel" />
-                                <label for="question5">12 Month</label>
-                                <span class="plan-price term-price">$348 / mo</span>
-                            </div>
-                        </div>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="question6" name="question" type="radio" class="with-font" value="sel" />
-                                <label for="question6">24 Month</label>
-                                <span class="plan-price term-price">$696 / mo</span>
-                            </div>
-                        </div>
+                    <div class="custom-control custom-radio mt-3">
+                        <input checked="" class="custom-control-input" id="annually-plan" name="premium-plan"
+                               type="radio" value="annual-subscription"/>
+                        <label class="custom-control-label" for="annually-plan">
+                            <strong>Yearly $49.99</strong>
+                            <span class="badge badge-primary ml-1">60% OFF</span>
+                            <br/>
+                            <small class="text-muted">
+                                Pay $49.99 every year and get access to all premium features.
+                            </small>
+                        </label>
                     </div>
-                    <div class="box">
-                        <h3 class="box-title">Secure your site</h3>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="box1" type="checkbox" class="with-font" />
-                                <label for="box1">Add malware scan and removal</label>
-                                <p class="plan-text">Nam sodales exviverra pretium erat ifermeoin accumsan ligula duiin ornare tortor euismod nece.</p>
-                                <span class="plan-price secure-price">$229 / mo</span>
-                            </div>
-                        </div>
-                        <div class="plan-selection">
-                            <div class="plan-data">
-                                <input id="box2" type="checkbox" class="with-font" />
-                                <label for="box2">Add standard SSL Certificate</label>
-                                <p class="plan-text">Class aptent taciti sociosqu ad litora torquent perconu bia nostrper inceptos himenelquet dui.</p>
-                                <span class="plan-price secure-price">$429 / mo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-lg mb30">Continue With Plans</a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-                    <!-- categories -->
-                    <div class="widget widget-summary">
-                        <h4 class="widget-title">Order Summary</h4>
-                        <div class="summary-block">
-                            <div class="summary-content">
-                                <div class="summary-head"><h5 class="summary-title">Personal</h5></div>
-                                <div class="summary-price">
-                                    <p class="summary-text">$29 / mo</p>
-                                    <span class="summary-small-text pull-right">1 month</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="summary-block">
-                            <div class="summary-content">
-                               <div class="summary-head"> <h5 class="summary-title">Website Security Essential</h5></div>
-                                <div class="summary-price">
-                                    <p class="summary-text">$229 / mo</p>
-                                    <span class="summary-small-text pull-right">1 month</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="summary-block">
-                            <div class="summary-content">
-                               <div class="summary-head"> <h5 class="summary-title">Total</h5></div>
-                                <div class="summary-price">
-                                    <p class="summary-text">$258 / mo</p>
-                                    <span class="summary-small-text pull-right">1 month</span>
-                                </div>
-                            </div>
+                <form action="#" id="payment-form" method="post">
+                    <input id="api-key" type="hidden" th:value="${stripePublicKey}">
+                    <div class="form-group">
+                        <label class="font-weight-medium" for="card-element">
+                            Enter credit or debit card below
+                        </label>
+                        <div class="w-100" id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
                         </div>
                     </div>
-                    <!-- /.categories -->
-                </div>
+                    <div class="form-group">
+                        <input class="form-control" id="email" name="email"
+                               placeholder="Email Address" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" id="coupon" name="coupon"
+                               placeholder="Coupon code (optional)" type="text">
+                    </div>
+                    <!-- Used to display Element errors. -->
+                    <div class="text-danger w-100" id="card-errors" role="alert"></div>
+                    <div class="form-group pt-2">
+                        <button class="btn btn-primary btn-block" id="submitButton" type="submit">
+                            Pay With Your Card
+                        </button>
+                        <div class="small text-muted mt-2">
+                            Pay securely with Stripe. By clicking the button above, you agree
+                            to our <a target="_blank" href="#">Terms of Service</a>,
+                            <a target="_blank" href="#">Privacy</a> and
+                            <a target="_blank" href="#">Refund</a> policies.
+
+                        </div>
+                    </div>
+
+
+                </form>               
+            </div>
+
             </div>
         </div>
     </div>
@@ -307,6 +271,78 @@
     });
     </script>
      <script type="text/javascript" src="js/return-to-top.js"></script>
+     
+     <script>
+    $(function () {
+        var API_KEY = $('#api-key').val();
+        // Create a Stripe client.
+        var stripe = Stripe(API_KEY);
+
+        // Create an instance of Elements.
+        var elements = stripe.elements();
+
+        // Create an instance of the card Element.
+        var card = elements.create('card');
+
+        // Add an instance of the card Element into the `card-element` <div>.
+        card.mount('#card-element');
+
+        // Handle real-time validation errors from the card Element.
+        card.addEventListener('change', function (event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            //validate coupon if any
+            var code = $('#coupon').val().trim();
+            if (code.length > 0) {
+                $.post(
+                    "/coupon-validator",
+                    {code: code},
+                    function (data) {
+                        if (data.status) {
+                            handlePayments();
+                        } else {
+                            alert(data.details);
+                        }
+                    }, 'json');
+            } else {
+                handlePayments();
+            }
+        });
+
+        //handle card submission
+        function handlePayments() {
+            stripe.createToken(card).then(function (result) {
+                if (result.error) {
+                    // Inform the user if there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    // Send the token to your server.
+                    var token = result.token.id;
+                    var plan = $('input[name="premium-plan"]:checked').val();
+                    var email = $('#email').val();
+                    var coupon = $('#coupon').val();
+                    $.post(
+                        "/create-subscription",
+                        {email: email, token: token, plan: plan, coupon: coupon},
+                        function (data) {
+                            alert(data.details);
+                        }, 'json');
+                }
+            });
+        }
+    });
+</script>
 </body>
 
 </html>

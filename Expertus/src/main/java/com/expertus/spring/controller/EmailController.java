@@ -37,6 +37,6 @@ public class EmailController {
         subscribe.setEmail(email);
         subscribeRepository.save(subscribe);
       }
-        return "about";
+        return "index";
     }
 }
