@@ -31,12 +31,9 @@ public class EmailController {
         helper.setSubject("Welcome to our Newsletter");
         sender.send(message);
         Subscribe subscribe = new Subscribe();
-      if( subscribeRepository.findByEmail(email)!=null)
-    	  return "Email Existant!";
-      else {
+      
         subscribe.setEmail(email);
-        subscribeRepository.save(subscribe);
-      }
-        return "index";
+        subscribeRepository.save(subscribe);     
+        return "contact-us";
     }
 }

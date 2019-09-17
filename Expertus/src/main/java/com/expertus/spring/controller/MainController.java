@@ -1,62 +1,81 @@
 package com.expertus.spring.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.expertus.spring.model.Complaint;
+import com.expertus.spring.repository.ComplaintRepository;
+
 @Controller
 public class MainController {
 
-	
-	@RequestMapping(value="/")
+	@Autowired
+	ComplaintRepository complaintRepository;
+	@RequestMapping(value = "/")
 	public String Home() {
-		return"index";
+		return "index";
 	}
-	@RequestMapping(value="/chat")
+
+	@RequestMapping(value = "/chat")
 	public String chat() {
-		return"chat";
+		return "chat";
 	}
-	@RequestMapping(value="/about")
+
+	@RequestMapping(value = "/about")
 	public String about() {
-		return"about";
+		return "about";
 	}
-	@RequestMapping(value="/action")
+
+	@RequestMapping(value = "/action")
 	public String action() {
-		return"call-to-actions";
+		return "call-to-actions";
 	}
-	@RequestMapping(value="/checkout")
+
+	@RequestMapping(value = "/checkout")
 	public String chekout() {
-		return"checkout";
+		return "checkout";
 	}
-	@RequestMapping(value="/contact")
+
+	@RequestMapping(value = "/contact")
 	public String contact() {
-		return"contact-us";
+		return "contact-us";
 	}
-	@RequestMapping(value="/faq")
+
+	@RequestMapping(value = "/faq")
 	public String faq() {
-		return"faq";
+		return "faq";
 	}
-	@RequestMapping(value="/service")
+
+	@RequestMapping(value = "/service")
 	public String service() {
-		return"service-single";
+		return "service-single";
 	}
-	@RequestMapping(value="/test")
+
+	@RequestMapping(value = "/test")
 	public String test() {
-		return"testimonials";
+		return "testimonials";
 	}
-	 @GetMapping("/index")
-	    public String root() {
-	        return "userindex";
-	    }
 
-	    @GetMapping("/login")
-	    public String login(Model model) {
-	        return "login";
-	    }
+	@GetMapping("/index")
+	public String root(Model model) {
+		List<Complaint> complaints=complaintRepository.findAll();
+		model.addAttribute("complaints", complaints);
+		return "userindex";
+	}
 
-	    @GetMapping("/user")
-	    public String userIndex() {
-	        return "user/index";
-	    }
+	@GetMapping("/login")
+	public String login(Model model) {
+		return "login";
+	}
+
+	@GetMapping("/user")
+	public String userIndex() {
+		return "user/index";
+	}
+	
 }

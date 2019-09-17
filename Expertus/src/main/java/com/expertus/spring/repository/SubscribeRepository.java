@@ -8,5 +8,5 @@ import com.expertus.spring.model.Subscribe;
 @Repository
 public interface SubscribeRepository extends JpaRepository<Subscribe, Long> {
 
-	public Subscribe findByEmail(String email);
+	
 }

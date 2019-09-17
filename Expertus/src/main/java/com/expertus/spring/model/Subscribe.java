@@ -1,6 +1,5 @@
 package com.expertus.spring.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,8 +12,7 @@ public class Subscribe {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-	@Email
-	@Column(unique=true)
+	@Email	
 	private String email;
 	public Long getId() {
 		return id;

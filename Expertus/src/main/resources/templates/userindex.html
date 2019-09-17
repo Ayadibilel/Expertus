@@ -40,8 +40,29 @@
 		<p>
 			Welcome 
 		</p>
+		<table class="table table-hover">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> email </th>
+            <th> Subject </th>
+            <th> Text </th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${complaints.empty}">
+            <td colspan="4"> No Complaint Available </td>
+        </tr>
+        <tr th:each="complaint : ${complaints}">
+            <td><span th:text="${complaint.name}"> Name </span></td>
+            <td><span th:text="${complaint.email}"> email </span></td>
+            <td><span th:text="${complaint.subject}"> Subject </span></td>
+            <td><span th:text="${complaint.textarea}"> Text </span></td>
+        </tr>
+    </tbody>
+</table>
 	</div>
-
+	
 	<script type="text/javascript"
 		th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
 	<script type="text/javascript"
